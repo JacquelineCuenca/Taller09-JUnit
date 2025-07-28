@@ -16,7 +16,31 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class PacienteTest {
     
-    public PacienteTest() {        
+    public PacienteTest() { 
+    }
+    
+    void testInit1(){
+        String cedula= "123";
+        String nombre = "Jacqueline";  
+        String correo = "correo@gmail.com";
+        
+        Paciente p = new Paciente(cedula, nombre, correo);
+        
+        assertEquals(cedula, p.getCedula());
+        assertEquals(nombre, p.getNombre());
+        assertEquals(correo, p.getCorreo());
+    }
+    
+    void testInit2(){
+        String cedula= "";
+        String nombre = "Jacqueline";  
+        String correo = "correo@gmail.com";
+        
+        Paciente p = new Paciente(cedula, nombre, correo);
+        
+        assertEquals("123", p.getCedula());
+        assertEquals(nombre, p.getNombre());
+        assertEquals(correo, p.getCorreo());
     }
     
     @BeforeAll
@@ -89,6 +113,10 @@ public class PacienteTest {
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
+    }
+
+    private void equals(String cedula, String cedula0) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
