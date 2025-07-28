@@ -42,12 +42,13 @@ public class ExamenLaboratorioTest {
     public void testRegistrarResultado() {
         System.out.println("registrarResultado");
         
-        String resultado = "";
-        ExamenLaboratorio instance = null;
+        String resultado = "positivo";
+        ExamenLaboratorio instance = new ExamenLaboratorio(null, null);
         
         instance.registrarResultado(resultado);
         
-        assertEquals("", resultado);
+        assertEquals(resultado, instance.getResultado());
+        assertNotNull(instance.getResultado());
     }
 
     /**
@@ -56,12 +57,16 @@ public class ExamenLaboratorioTest {
     @Test
     public void testToString() {
         System.out.println("toString");
-        ExamenLaboratorio instance = null;
-        String expResult = "";
-        String result = instance.toString();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        String cedula= "123";
+        String nombre = "Jacqueline";  
+        String correo = "correo@gmail.com";
+        
+        Paciente p = new Paciente(cedula, nombre, correo);
+        ExamenLaboratorio e = new ExamenLaboratorio(p, "examentipo");
+                
+        assertEquals("pendiente", e.getResultado());
+        
     }
     
 }
