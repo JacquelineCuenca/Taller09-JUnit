@@ -19,4 +19,9 @@ public class ExamenLaboratorio {
     public String toString() {
         return "Examen: " + tipoExamen + " - Paciente: " + paciente + " - Resultado: " + resultado;
     }
+
+    public String getResultado() {
+        return resultado;
+    }
+    
 }

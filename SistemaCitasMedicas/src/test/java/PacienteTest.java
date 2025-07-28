@@ -29,7 +29,9 @@ public class PacienteTest {
         assertEquals(cedula, p.getCedula());
         assertEquals(nombre, p.getNombre());
         assertEquals(correo, p.getCorreo());
-        assertNotNull(cedula);
+        assertNotNull(p.getCedula());
+        assertNotNull(p.getNombre());
+        assertNotNull(p.getCedula());
         
     }
     
