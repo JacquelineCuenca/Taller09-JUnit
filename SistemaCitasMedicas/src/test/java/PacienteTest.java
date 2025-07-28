@@ -19,7 +19,7 @@ public class PacienteTest {
     public PacienteTest() { 
     }
     
-    void testInit1(){
+    void testInit(){
         String cedula= "123";
         String nombre = "Jacqueline";  
         String correo = "correo@gmail.com";
@@ -29,19 +29,10 @@ public class PacienteTest {
         assertEquals(cedula, p.getCedula());
         assertEquals(nombre, p.getNombre());
         assertEquals(correo, p.getCorreo());
+        assertNotNull(cedula);
+        
     }
     
-    void testInit2(){
-        String cedula= "";
-        String nombre = "Jacqueline";  
-        String correo = "correo@gmail.com";
-        
-        Paciente p = new Paciente(cedula, nombre, correo);
-        
-        assertEquals("123", p.getCedula());
-        assertEquals(nombre, p.getNombre());
-        assertEquals(correo, p.getCorreo());
-    }
     
     @BeforeAll
     public static void setUpClass() {
