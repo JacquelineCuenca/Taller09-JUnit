@@ -15,24 +15,49 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author CltControl
  */
 public class MedicoTest {
-    
+
     public MedicoTest() {
     }
-    
+
     @BeforeAll
     public static void setUpClass() {
     }
-    
+
     @AfterAll
     public static void tearDownClass() {
     }
-    
+
     @BeforeEach
     public void setUp() {
     }
-    
+
     @AfterEach
     public void tearDown() {
+    }
+
+    // nombre, especialidad
+    @Test
+    public void testInit1() {
+        String nombre = "Juan";
+        String especialidad = "Cardiologo";
+
+        Medico medico = new Medico(nombre, especialidad);
+
+        assertEquals(nombre, medico.getNombre());
+        assertEquals(especialidad, medico.getEspecialidad());
+
+    }
+
+    // nombre vacío, especialidad
+    @Test
+    public void testInit2() {
+        String nombre = "";
+        String especialidad = "Cardiologo";
+
+        Medico medico = new Medico(nombre, especialidad);
+
+        assertEquals(nombre, medico.getNombre());
+        assertEquals(especialidad, medico.getEspecialidad());
     }
 
     /**
@@ -40,13 +65,14 @@ public class MedicoTest {
      */
     @Test
     public void testGetNombre() {
-        System.out.println("getNombre");
-        Medico instance = null;
-        String expResult = "";
+        System.out.println("testGetNombre");
+
+        Medico instance = new Medico(null, "Cardiología");
+
+        String expResult = "Dr. Juan Pérez";
         String result = instance.getNombre();
+
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -54,13 +80,14 @@ public class MedicoTest {
      */
     @Test
     public void testGetEspecialidad() {
-        System.out.println("getEspecialidad");
-        Medico instance = null;
-        String expResult = "";
+        System.out.println("testGetEspecialidad");
+
+        Medico instance = new Medico("Dr. Juan Pérez", "Cardiologia");
+
+        String expResult = "Cardiología";
         String result = instance.getEspecialidad();
+
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -68,13 +95,12 @@ public class MedicoTest {
      */
     @Test
     public void testToString() {
-        System.out.println("toString");
-        Medico instance = null;
-        String expResult = "";
+        System.out.println("testToString");
+
+        Medico instance = new Medico("Dr. Juan Pérez", "Cardiología");
+        String expResult = "Dr. Juan Pérez - Cardiología";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-    
+
 }
