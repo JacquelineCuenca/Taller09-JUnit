@@ -1,0 +1,59 @@
+-------------------------------------------------------------------------------
+Test set: CitaMedicaTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 1, Errors: 6, Skipped: 0, Time elapsed: 0.088 s <<< FAILURE! -- in CitaMedicaTest
+CitaMedicaTest.testGetPaciente -- Time elapsed: 0.031 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "CitaMedica.getPaciente()" because "instance" is null
+	at CitaMedicaTest.testGetPaciente(CitaMedicaTest.java:74)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+CitaMedicaTest.testToString -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "CitaMedica.toString()" because "instance" is null
+	at CitaMedicaTest.testToString(CitaMedicaTest.java:143)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+CitaMedicaTest.testSetEstado -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "CitaMedica.setEstado(String)" because "instance" is null
+	at CitaMedicaTest.testSetEstado(CitaMedicaTest.java:130)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+CitaMedicaTest.testGetEstado -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "CitaMedica.getEstado()" because "instance" is null
+	at CitaMedicaTest.testGetEstado(CitaMedicaTest.java:116)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+CitaMedicaTest.testGetMedico -- Time elapsed: 0 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "CitaMedica.getMedico()" because "instance" is null
+	at CitaMedicaTest.testGetMedico(CitaMedicaTest.java:88)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+CitaMedicaTest.testToString_CM1 -- Time elapsed: 0 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Cita con Dra. Susana - Cardiología para Axel Roman (1234567890) en 2025-08-10T15:30 [Agendada]> but was: <Cita con Dra. Susana - Cardiologia para Axel Roman (1234567890) en 2025-08-10T15:30 [Agendada]>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at CitaMedicaTest.testToString_CM1(CitaMedicaTest.java:49)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+CitaMedicaTest.testGetFechaHora -- Time elapsed: 0 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "CitaMedica.getFechaHora()" because "instance" is null
+	at CitaMedicaTest.testGetFechaHora(CitaMedicaTest.java:102)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

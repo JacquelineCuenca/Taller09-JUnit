@@ -35,10 +35,37 @@ public class CitaMedicaTest {
     @AfterEach
     public void tearDown() {
     }
-
+     /**
+     * Test of getPaciente method, of class CitaMedica.
+     */
+    @Test
+    public void testToString_CM1(){
+        Paciente paciente = new Paciente("1234567890", "Axel Roman", "axel@correo.com");
+        Medico medico=new Medico("Dra. Susana","Cardiologia");
+        LocalDateTime fecha=LocalDateTime.of(2025,8,10,15,30);
+        CitaMedica cita=new CitaMedica(paciente,medico,fecha);
+        String esperado = "Cita con Dra. Susana - Cardiología para Axel Roman (1234567890) en " + fecha + " [Agendada]";
+        String actual = cita.toString();
+        assertEquals(esperado, actual);
+    }
     /**
      * Test of getPaciente method, of class CitaMedica.
      */
+    @Test
+    public void testSetEstado_CM2_nullAllowed() {
+    Paciente paciente = new Paciente("123", "Axel Roman", "axel@correo.com");
+    Medico medico = new Medico("Dra. Susana", "Cardiología");
+    LocalDateTime fecha = LocalDateTime.of(2025, 8, 15, 10, 0);
+    CitaMedica cita = new CitaMedica(paciente, medico, fecha);
+
+    cita.setEstado(null);
+    assertNull(cita.getEstado(), "El estado debería poder asignarse como null");
+}
+ /**
+     * Test of getPaciente method, of class CitaMedica.
+     */
+   
+    
     @Test
     public void testGetPaciente() {
         System.out.println("getPaciente");

@@ -11,6 +11,10 @@ public class Paciente {
         this.correo = correo;
     }
 
+    Paciente(String axel_Roman) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public String getCedula() {
         return cedula;
     }
