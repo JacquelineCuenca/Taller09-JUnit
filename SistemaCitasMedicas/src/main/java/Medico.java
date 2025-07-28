@@ -7,8 +7,23 @@ public class Medico {
         this.especialidad = especialidad;
     }
 
-    public String getNombre() { return nombre; }
-    public String getEspecialidad() { return especialidad; }
+    public String getNombre() {
+
+        if (this.nombre == null) {
+            throw new IllegalStateException("El nombre no puede ser nulo");
+        }
+        return nombre;
+    }
+
+    
+
+    public String getEspecialidad() {
+         
+        if (this.especialidad == null) {
+            throw new IllegalStateException("La especialidad no puede ser nulo");
+        }
+        return especialidad;
+    }
 
     @Override
     public String toString() {
